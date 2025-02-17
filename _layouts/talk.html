@@ -39,11 +39,11 @@ layout: default
   <p class="page__date">
     <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> 
     <time datetime="{{ page.date | date_to_xmlschema }}">
-      {% if page.date contains "-" and page.date.size > 7 %}
-        {{ full_date }}
-      {% else %}
-        {{ year_month }}
-      {% endif %}
+ {% if page.date contains "-" and page.date.size > 7 %}
+  {{ page.date | date: "%B %d, %Y" }}
+{% else %}
+  {{ page.date | date: "%B %Y" }}
+{% endif %}
     </time>
   </p>
 
