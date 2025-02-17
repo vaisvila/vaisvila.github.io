@@ -35,7 +35,13 @@ layout: default
 {% elsif page.date %}
   <p class="page__date">
     <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> 
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    <time datetime="{% if page.date.size == 7 %}{{ page.date | append: "-01" | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+      {% if page.date.size == 7 %}
+        {{ page.date | append: "-01" | date: "%B %Y" }} <!-- Shows "Month Year" format -->
+      {% else %}
+        {{ page.date | date: "%B %d, %Y" }} <!-- Standard "Month Day, Year" format -->
+      {% endif %}
+    </time>
   </p>
 
         {% endif %}
