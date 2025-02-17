@@ -32,19 +32,10 @@ layout: default
           {% endif %}
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-   {% elsif page.date %}
-  {% assign year_month = page.date | date: "%Y-%m" %}
-  {% assign full_date = page.date | date: "%B %d, %Y" %}
-  
+{% elsif page.date %}
   <p class="page__date">
     <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> 
-    <time datetime="{{ page.date | date_to_xmlschema }}">
- {% if page.date contains "-" and page.date.size > 7 %}
-  {{ page.date | date: "%B %d, %Y" }}
-{% else %}
-  {{ page.date | date: "%B %Y" }}
-{% endif %}
-    </time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
   </p>
 
         {% endif %}
