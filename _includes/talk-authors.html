@@ -1,0 +1,1 @@
+{% comment %}Author list with the site owner's name in bold. Pass authors="..." {% endcomment %}{% if include.authors %}<span class="talk__authors">{{ include.authors | replace: "Vaisvil, A.", "<strong>Vaisvil, A.</strong>" | replace: "A. Vaisvil", "<strong>A. Vaisvil</strong>" | replace: "A.V. Vaisvil", "<strong>A.V. Vaisvil</strong>" }}</span>{% endif %}

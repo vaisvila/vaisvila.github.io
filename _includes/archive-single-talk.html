@@ -15,6 +15,7 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    {% if post.authors %}<p class="archive__item-authors">{% include talk-authors.html authors=post.authors %}</p>{% endif %}
     <p class="page__meta">
       {% if post.type %}{{ post.type }}{% endif %}{% if post.invited %} <span class="talk__invited">Invited</span>{% endif %}
       {% if post.date %}{% if post.type %} &middot; {% endif %}<time datetime="{{ post.date | date: "%Y-%m" }}">{{ post.date | date: "%B %Y" }}</time>{% endif %}

@@ -45,7 +45,7 @@ layout: default
           {% if page.citation or page.paperurl %}
             <div class="page__citation">
               {% if page.citation %}<p><span class="page__citation-label">Recommended citation</span> {{ page.citation }}</p>{% endif %}
-              {% if page.paperurl %}<p class="page__citation-actions"><a class="btn btn--small btn--paper" href="{{ page.paperurl | strip }}"><i class="fas fa-fw fa-file-alt" aria-hidden="true"></i> Paper</a></p>{% endif %}
+              {% if page.paperurl %}<p class="page__citation-actions"><a class="btn btn--small btn--paper" href="{{ page.paperurl | strip }}"><i class="fas fa-fw fa-file-alt" aria-hidden="true"></i> {{ page.paperlabel | default: "Paper" }}</a></p>{% endif %}
             </div>
           {% endif %}
         </header>

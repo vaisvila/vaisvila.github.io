@@ -14,7 +14,7 @@ redirect_from:
 
 ## Education
 * **Ph.D., Fisheries Science** — Oklahoma State University, Stillwater, OK, 2026
-  * Dissertation: *Population dynamics of Striped Bass in the Robert S. Kerr river–reservoir complex, Oklahoma*
+  * Dissertation: [*Population dynamics of Striped Bass in a river–reservoir complex*](https://hdl.handle.net/20.500.14446/350604) (Robert S. Kerr river–reservoir complex, Oklahoma)
 * **M.S., Fish, Wildlife, and Conservation Ecology** — New Mexico State University, Las Cruces, NM, 2019
   * Thesis: *Natal source and the influence of environmental bottlenecks on Largemouth Bass recruitment in Elephant Butte Reservoir, New Mexico*
 * **B.S., Biology** (minors: Chemistry; Environmental Studies) — Xavier University, Cincinnati, OH, 2016

@@ -30,6 +30,7 @@ layout: default
           {% if page.read_time %}
             <p class="page__meta"><i class="fas fa-fw fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
+        {% if page.authors %}<p class="page__authors">{% include talk-authors.html authors=page.authors %}</p>{% endif %}
         {% if page.date or page.venue or page.type %}
           <p class="page__meta">
             {% if page.type %}<strong>{{ page.type }}</strong>{% endif %}{% if page.invited %} <span class="talk__invited">Invited</span>{% endif %}

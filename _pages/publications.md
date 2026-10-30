@@ -14,6 +14,7 @@ author_profile: true
 {% assign pubs = site.publications | sort: "date" | reverse %}
 {% assign journal_pubs = pubs | where: "pubtype", "journal" %}
 {% assign report_pubs = pubs | where: "pubtype", "report" %}
+{% assign data_pubs = pubs | where: "pubtype", "data" %}
 
 {% if journal_pubs.size > 0 %}
 <h2 id="peer-reviewed">Peer-reviewed articles</h2>
@@ -25,6 +26,13 @@ author_profile: true
 {% if report_pubs.size > 0 %}
 <h2 id="reports">Reports</h2>
 {% for post in report_pubs %}
+  {% include archive-single.html %}
+{% endfor %}
+{% endif %}
+
+{% if data_pubs.size > 0 %}
+<h2 id="data-software">Data and software</h2>
+{% for post in data_pubs %}
   {% include archive-single.html %}
 {% endfor %}
 {% endif %}

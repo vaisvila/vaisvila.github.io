@@ -35,7 +35,7 @@
 {%- if post.paperurl or site.read_more == 'enabled' %}
 <p class="archive__item-actions">
 {%- if post.paperurl -%}
-<a class="btn btn--small btn--paper" href="{{ post.paperurl | strip }}" itemprop="url"><i class="fas fa-fw fa-file-alt" aria-hidden="true"></i> Paper<span class="sr-only"> (opens publisher page)</span></a>
+<a class="btn btn--small btn--paper" href="{{ post.paperurl | strip }}" itemprop="url"><i class="fas fa-fw fa-file-alt" aria-hidden="true"></i> {{ post.paperlabel | default: "Paper" }}<span class="sr-only"> (opens publisher page)</span></a>
 {%- endif -%}
 {%- if site.read_more == 'enabled' -%}
 <a class="btn btn--small btn--ghost" href="{{ base_path }}{{ post.url }}" rel="permalink">Read more</a>
