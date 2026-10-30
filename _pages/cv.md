@@ -21,14 +21,15 @@ redirect_from:
   * Senior thesis: *(E)-6,10-dimethyl-5,9-undecadien-2-yl acetate: a likely attractant pheromone of* Nicrophorus defodiens
 
 ## Professional experience
-* **Fish Biologist** — Bay-Delta Area Office, Science Division, U.S. Bureau of Reclamation, Sacramento, CA *(Dec 2023–present)*
-  * Lead analytical support for the American River Group Structured Decision Making (SDM) effort, developing and applying fall-run Chinook Salmon life-cycle models to evaluate flow and temperature management alternatives on the American River
-  * Develop and maintain salmon population models in R that integrate temperature-dependent mortality, spawn-timing dynamics, and age-structured returns
-  * Build interactive R Shiny applications for real-time decision support, letting managers visualize model outputs and compare scenarios
-  * Contribute to Delta Life-Cycle Model development, implementing mechanistic approaches to quantify the effects of water exports on winter-run Chinook Salmon
-  * Develop Value of Information frameworks to assess flow management alternatives and minimize impacts to endangered salmon in the Sacramento River
-  * Provide weekly salmon operations assessments, synthesizing real-time monitoring data to inform water management decisions affecting ESA-listed species
-  * Lead analytical work for regulatory actions and temperature analyses for salmon habitat restoration; prepare technical input to environmental compliance documents
+* **Lead Biometrician and Population Modeler** — California Department of Water Resources, Sacramento, CA *(Jun 2026–present)*{% comment %}TODO(Alexander): add 2–4 bullets describing the DWR role.{% endcomment %}
+* **Fish Biologist** — Bay-Delta Area Office, Science Division, U.S. Bureau of Reclamation, Sacramento, CA *(Dec 2023–Jun 2026)*
+  * Led analytical support for the American River Group Structured Decision Making (SDM) effort, developing and applying fall-run Chinook Salmon life-cycle models to evaluate flow and temperature management alternatives on the American River
+  * Developed and maintained salmon population models in R that integrate temperature-dependent mortality, spawn-timing dynamics, and age-structured returns
+  * Built interactive R Shiny applications for real-time decision support, letting managers visualize model outputs and compare scenarios
+  * Contributed to Delta Life-Cycle Model development, implementing mechanistic approaches to quantify the effects of water exports on winter-run Chinook Salmon
+  * Developed Value of Information frameworks to assess flow management alternatives and minimize impacts to endangered salmon in the Sacramento River
+  * Provided weekly salmon operations assessments, synthesizing real-time monitoring data to inform water management decisions affecting ESA-listed species
+  * Led analytical work for regulatory actions and temperature analyses for salmon habitat restoration; prepared technical input to environmental compliance documents
 * **Graduate Research Assistant** — Natural Resource Ecology and Management, Oklahoma State University *(Jun 2019–Jun 2023)*
   * Coordinated field work with state (ODWC) and federal (USACE, USFWS) agencies and led field and lab teams
   * Boat electrofishing around dams and in swift current; passive and active radio and acoustic telemetry, including transmitter implantation surgery; reward tagging, PIT tagging, and an angler tag-reporting database

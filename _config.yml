@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Alexander Vaisvil"
 title_separator          : "-"
 name                     : &name "Alexander Vaisvil"
-description              : &description "Fish Biologist, U.S. Bureau of Reclamation"
+description              : &description "Lead Biometrician and Population Modeler, California Department of Water Resources"
 url                      : https://vaisvila.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "vaisvila/vaisvila.github.io"
@@ -83,10 +83,10 @@ analytics:
 author:
   name             : "Alexander Vaisvil"
   avatar           : "profile.png" # placeholder silhouette in /images/ — TODO(Alexander): replace with a real headshot (e.g. images/profile.jpg)
-  bio              : "Fish Biologist · U.S. Bureau of Reclamation"
+  bio              : "Lead Biometrician & Population Modeler · California Department of Water Resources"
   location         : "Sacramento, California"
-  employer         : "U.S. Bureau of Reclamation"
-  email            : "avaisvil@usbr.gov"
+  employer         : "California Department of Water Resources"
+  email            : "alexander.vaisvil@water.ca.gov"
   uri              : # TODO(Alexander): personal website URL, if any
   googlescholar    : # TODO(Alexander): full Google Scholar profile URL
   orcid            : # TODO(Alexander): ORCID URL, e.g. "https://orcid.org/0000-0000-0000-0000"

@@ -1,6 +1,6 @@
 # vaisvila.github.io
 
-Personal academic website of **Alexander Vaisvil**, Fish Biologist with the U.S. Bureau of Reclamation.
+Personal academic website of **Alexander Vaisvil**, Lead Biometrician and Population Modeler with the California Department of Water Resources.
 Live at <https://vaisvila.github.io>.
 
 The site is built with [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages. It is based on the
