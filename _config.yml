@@ -10,16 +10,15 @@ locale                   : "en-US"
 title                    : "Alexander Vaisvil"
 title_separator          : "-"
 name                     : &name "Alexander Vaisvil"
-description              : &description "Fish Biologist U.S. Bureau of Reclamation"
+description              : &description "Fish Biologist, U.S. Bureau of Reclamation"
 url                      : https://vaisvila.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "vaisvila/vaisvila.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -73,43 +72,45 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
+  # TODO(Alexander): to enable analytics, set provider to "custom" and paste a Google Analytics 4 snippet into _includes/analytics-providers/custom.html (Universal Analytics was retired in 2023).
   google:
     tracking_id          :
 
 
 # Site Author
+# Shown in the left-hand sidebar on every page. Leave a field blank to hide it.
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  name             : "Alexander Vaisvil"
+  avatar           : "profile.png" # placeholder silhouette in /images/ — TODO(Alexander): replace with a real headshot (e.g. images/profile.jpg)
+  bio              : "Fish Biologist · U.S. Bureau of Reclamation"
+  location         : "Sacramento, California"
+  employer         : "U.S. Bureau of Reclamation"
+  email            : "avaisvil@usbr.gov"
+  uri              : # TODO(Alexander): personal website URL, if any
+  googlescholar    : # TODO(Alexander): full Google Scholar profile URL
+  orcid            : # TODO(Alexander): ORCID URL, e.g. "https://orcid.org/0000-0000-0000-0000"
+  researchgate     : # TODO(Alexander): ResearchGate profile URL, if any
+  linkedin         : # TODO(Alexander): LinkedIn username, if any
+  github           : # TODO(Alexander): GitHub username, if you want it shown
+  twitter          : # TODO(Alexander): Twitter/X handle, if any
+  pubmed           :
+  impactstory      :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
@@ -130,6 +131,12 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - CHANGELOG
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile.lock
+  - "*.Rproj"
+  - .Rproj.user
+  - .jekyll-cache
   - Capfile
   - Gemfile
   - Gruntfile.js
@@ -175,13 +182,7 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -209,15 +210,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""
@@ -225,17 +217,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
   - scope:
       path: ""
@@ -243,7 +226,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: true
+      share: false
 
 # Sass/SCSS
 sass:
@@ -271,36 +254,8 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-redirect-from
   - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
 
 # HTML Compression

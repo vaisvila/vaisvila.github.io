@@ -1,8 +1,10 @@
 # Authors
+# Optional per-page author override (set `author: alexander` in a page's front matter).
+# The sidebar normally uses the `author:` block in _config.yml.
 
-Name Name:
+alexander:
   name        : "Alexander Vaisvil"
-  uri         : "http://alexandervaisvil.com"
+  uri         : # TODO(Alexander): personal website URL (unverified: http://alexandervaisvil.com)
   email       : "avaisvil@usbr.gov"
-  bio         : "Alexander Vaisvil is a Fish Biologist with the U.S. Bureau of Reclamation, specializing in fisheries science, water quality monitoring, and environmental compliance in the San Francisco Bay/Sacramento-San Joaquin Delta. His work focuses on assessing the impacts of water operations on aquatic ecosystems, developing scientific monitoring programs, and providing data-driven recommendations for resource management. Alexander is currently completing his Ph.D. in Fisheries Science at Oklahoma State University, where his research explores Striped Bass population dynamics and habitat use. He holds a Master of Science in Fish, Wildlife, and Conservation Ecology from New Mexico State University, where he investigated environmental bottlenecks affecting Largemouth Bass recruitment. With extensive experience in field monitoring, advanced statistical modeling, and interagency collaboration, Alexander has led multi-agency environmental projects, contributed to Environmental Impact Statements (EIS) and Biological Assessments (BA), and presented research at national conferences. His expertise in aquatic ecology, regulatory compliance, and fisheries conservation supports sustainable water resource management and ecological resilience."
-  avatar      : "bio-photo-2.jpg"
+  bio         : "Alexander Vaisvil is a Fish Biologist with the U.S. Bureau of Reclamation's Bay-Delta Area Office in Sacramento, California, where he develops Chinook Salmon life-cycle models, structured decision making analyses, and R Shiny decision-support tools to evaluate flow and temperature management for Central Valley salmon. He earned his Ph.D. in Fisheries Science from Oklahoma State University in 2026, studying the population dynamics of Striped Bass in the Robert S. Kerr river-reservoir complex, and his M.S. in Fish, Wildlife, and Conservation Ecology from New Mexico State University, studying the natal origin and recruitment of Largemouth Bass in Elephant Butte Reservoir."
+  avatar      : "profile.png" # TODO(Alexander): replace with a real headshot in /images/

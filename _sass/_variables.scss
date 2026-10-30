@@ -13,8 +13,8 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$serif                      : "Source Serif 4", "Source Serif Pro", Georgia, Times, serif;
+$sans-serif                 : "Source Sans 3", "Source Sans Pro", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
@@ -29,7 +29,7 @@ $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+$header-font-family         : $serif;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -57,10 +57,10 @@ $body-color                 : #fff;
 $background-color           : #fff;
 $code-background-color      : #fafafa;
 $code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$text-color                 : #22323a;  // deep slate
+$border-color               : #dde6e9;  // cool, subtle
 
-$primary-color              : #7a8288;
+$primary-color              : #0f5c6b;  // deep river teal (7.6:1 on white)
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
@@ -89,12 +89,19 @@ $youtube-color              : #bb0000;
 $xing-color                 : #006567;
 
 
+/* site palette (aquatic, calm) */
+$muted-color                : #5b6d75;  // 5.4:1 on white
+$accent-tint                : #eaf3f5;  // pale water
+$accent-tint-2              : #f4f8f9;  // page wash
+$accent-soft                : #9cc5cd;  // decorative rules/separators only
+$accent-ring                : #6f9aa3;  // ~3:1 on white: icons, control outlines
+
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color                 : #0b6577;  // 6.7:1 on white (WCAG AA/AAA body)
+$link-color-hover           : #07404b;
+$link-color-visited         : #2f5f73;  // 7.0:1 on white
+$masthead-link-color        : #33464f;
+$masthead-link-color-hover  : $primary-color;
 
 
 /*
@@ -146,8 +153,8 @@ $susy: (
    Other
    ========================================================================== */
 
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 2px rgba(15, 50, 60, 0.08);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $global-transition          : all 0.2s ease-in-out;

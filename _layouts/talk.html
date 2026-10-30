@@ -20,38 +20,38 @@ layout: default
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%Y-%m" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%Y-%m-%d" }}">{% endif %}
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
+        <header class="page__header">
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+            <p class="page__meta"><i class="fas fa-fw fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-{% elsif page.date %}
-  <p class="page__date">
-    <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> 
-    <time datetime="{% if page.date.size == 7 %}{{ page.date | append: "-01" | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
-      {% if page.date.size == 7 %}
-        {{ page.date | append: "-01" | date: "%B %Y" }} <!-- Shows "Month Year" format -->
-      {% else %}
-        {{ page.date | date: "%B %d, %Y" }} <!-- Standard "Month Day, Year" format -->
-      {% endif %}
-    </time>
-  </p>
-
+        {% if page.date or page.venue or page.type %}
+          <p class="page__meta">
+            {% if page.type %}<strong>{{ page.type }}</strong>{% endif %}{% if page.invited %} <span class="talk__invited">Invited</span>{% endif %}
+            {% if page.date %}{% if page.type %} &middot; {% endif %}<time datetime="{{ page.date | date: "%Y-%m" }}">{{ page.date | date: "%B %Y" }}</time>{% endif %}
+            {% if page.venue %}{% if page.type or page.date %} &middot; {% endif %}{{ page.venue }}{% endif %}
+          </p>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
-
+        {% if page.citation %}
+          <div class="page__citation">
+            <p><span class="page__citation-label">Citation</span> {{ page.citation }}</p>
+          </div>
+        {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {{ content }}
+        {% assign stripped_content = content | strip_html | strip %}
+        {% if stripped_content != "" %}
+          {{ content }}
+        {% elsif page.excerpt %}
+          {{ page.excerpt | markdownify }}
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

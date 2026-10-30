@@ -1,2 +1,11 @@
 _site/
 
+.Rproj.user
+*.Rproj
+.Rhistory
+
+# Local Ruby/Jekyll build artifacts
+vendor/
+.bundle/
+.jekyll-cache/
+.sass-cache/

@@ -7,31 +7,28 @@ author_profile: true
 
 {% include base_path %}
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+All pages on this site. An [XML sitemap]({{ base_path }}/sitemap.xml) is also available.
 
 <h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
+<ul>
+  <li><a href="{{ base_path }}/">About</a></li>
+{% for link in site.data.navigation.main %}
+  <li><a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a></li>
 {% endfor %}
+</ul>
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2>Publications</h2>
+<ul>
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% for post in pubs %}{% unless post.sitemap == false %}
+  <li><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>{% if post.venue %} &mdash; <em>{{ post.venue }}</em>{% endif %}, {{ post.date | date: "%Y" }}</li>
+{% endunless %}{% endfor %}
+</ul>
 
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+<h2>Talks and posters</h2>
+<ul>
+{% assign talks = site.talks | sort: "date" | reverse %}
+{% for post in talks %}{% unless post.sitemap == false %}
+  <li><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>{% if post.type %} ({{ post.type }}){% endif %}, {{ post.date | date: "%B %Y" }}</li>
+{% endunless %}{% endfor %}
+</ul>
